@@ -23,11 +23,17 @@ const isAdult = people.some(
 
 console.log({ isAdult }); // the curly braces will show the name of the variable along with the value
 
-
 // Array.prototype.every() // is everyone 19 or older?
 const allAdults = people.every(
-    person => new Date().getFullYear() - person.year >= 19
+  person => new Date().getFullYear() - person.year >= 19
 );
 
 console.log(allAdults);
 
+// Array.prototype.find()
+// Find is like filter, but instead returns just the one you are looking for
+// find the comment with the ID of 823423
+
+const comment = comments.find(comment => comment.id === 823423);
+
+console.log(comment);
